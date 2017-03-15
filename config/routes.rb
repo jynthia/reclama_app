@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
+  root 'application#start'
+
   get 'first/home'
 
   get 'first/help'
-
-  get 'first_compshome/help'
-
-  root 'application#start'
 end
