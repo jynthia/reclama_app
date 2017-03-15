@@ -4,4 +4,7 @@ class FirstController < ApplicationController
 
   def help
   end
+
+  def about
+  end
 end

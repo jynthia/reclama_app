@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get 'first/home'
 
   get 'first/help'
+
+  get 'first/about'
 end
