@@ -19,4 +19,10 @@ class MessageTest < ActiveSupport::TestCase
     @message.number = "     "
     assert_not @message.valid?
   end
+
+  test "number should be unique" do
+    duplicate_user = @message.dup
+    @message.save
+    assert_not duplicate_user.valid?
+  end
 end
