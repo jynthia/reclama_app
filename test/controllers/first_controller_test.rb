@@ -2,27 +2,29 @@ require 'test_helper'
 
 class FirstControllerTest < ActionDispatch::IntegrationTest
 
-  test "should get root" do
-    get root_url
-    assert_response :success
-  end
 
   test "should get home" do
-    get first_home_url
+    get root_path
     assert_response :success
     assert_select "title", "Home - Reclama App"
   end
 
   test "should get help" do
-    get first_help_url
+    get help_path
     assert_response :success
     assert_select "title", "Help - Reclama App"
   end
 
   test "should get about" do
-    get first_about_url
+    get about_path
     assert_response :success
     assert_select "title", "About - Reclama App"
+  end
+
+  test "should get submit" do
+    get submit_path
+    assert_response :success
+    assert_select "title", "Submit - Reclama App"
   end
 
 end

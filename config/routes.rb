@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'first#home'
 
-  get 'first/home'
+  get '/help', to: 'first#help'
 
-  get 'first/help'
+  get '/about', to: 'first#about'
 
-  get 'first/about'
+  get '/submit', to: 'first#submit'
 end

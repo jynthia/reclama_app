@@ -7,4 +7,7 @@ class FirstController < ApplicationController
 
   def about
   end
+
+  def submit
+  end
 end
