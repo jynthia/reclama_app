@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'application#start'
+  root 'first#home'
 
   get 'first/home'
 
