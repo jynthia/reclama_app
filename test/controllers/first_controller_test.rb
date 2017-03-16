@@ -21,10 +21,5 @@ class FirstControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "About - Reclama App"
   end
 
-  test "should get submit" do
-    get submit_path
-    assert_response :success
-    assert_select "title", "Submit - Reclama App"
-  end
 
 end

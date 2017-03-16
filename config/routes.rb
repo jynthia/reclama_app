@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'suggestions/new'
+
   root 'first#home'
 
   get '/help', to: 'first#help'
 
   get '/about', to: 'first#about'
 
-  get '/submit', to: 'first#submit'
+  get '/new', to: 'suggestions#new'
 end
