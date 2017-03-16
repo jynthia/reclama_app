@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= fill_title(yield(:title)) %></title>
-
-    <%= csrf_meta_tags %>
-
-
-    <%= stylesheet_link_tag    'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <header>
-  <div class="container">
-  	<nav class="menu">
-				<ul>
-					<li id="home"><%= link_to "Home" %></li>
-
-					<li id="about"><%= link_to "About" %></li>
-
-					<li id="help"><%= link_to "Help" %></li>
-				</ul>
-			</nav>
-  </div>			
-  </header>
+  <%= render 'layouts/head' %>
+  <%= render 'layouts/header' %>
 
   <div class="container">
   <body>
     <%= yield %>
+
+  <%= render 'layouts/footer' %> 
+
+		</div>
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+
+		<script src="js/test.js"></script>
   </body>
   </div>
+
+
 </html>
