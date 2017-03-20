@@ -3,16 +3,15 @@
 
 class MessagesController < ApplicationController
 
+  # Gets the box, which is the index of all the messages paginated per 100
+  def index
+    @messages = Message.paginate(page: params[:page], per_page: 100)
+  end
+
   # NOT DONE!
-  # Should implement search, paginate and showing all the content in the model base
+  # Should implement search
   def show
     @message = Message.find(params[:id])
-    @messages = Message.all
-    if params[:search]
-      @messages = Message.search(params[:search]).order("created_at DESC")
-    else
-      @messages = Message.all.order('created_at DESC')
-    end
   end
 
   # Initializes a new message class field
@@ -33,6 +32,11 @@ class MessagesController < ApplicationController
   # Finds message to edit
   def edit
   	@message = Message.find(params[:id])
+  end
+
+  def destroy
+    Message.find(params[:id]).destroy
+    redirect_to messages_url
   end
 
   private

@@ -1,0 +1,26 @@
+<!-- Get std title -->
+<% provide(:title, "Box") %>
+
+<h1>Box</h1>
+	<p>This is the box page for the toy project Reclama App</p>
+	<h2><%= link_to "Upload your suggestion! <3", new_message_path %></h2>
+
+<!-- NOT DONE
+SHOULD display all messages archived 
+SHOULD paginate 100 -->
+
+<%= will_paginate %>
+
+<ul class="messages">
+  <% @messages.each do |m| %>
+    <li>
+      <%= link_to m.content, m %>
+      <%= link_to m.number, m %>
+      <%= link_to "delete", m, method: :delete, data: { confirm: "You sure?" } %>
+      <%= link_to "update", m, method: :update, data: { confirm: "You sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
