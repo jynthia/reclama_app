@@ -1,13 +1,17 @@
+<!-- Get std title -->
 <% provide(:title, "Box") %>
 
 <h1>Box</h1>
 	<p>This is the box page for the toy project Reclama App</p>
 	<h2><%= link_to "Upload your suggestion! <3", new_message_path %></h2>
 
+<!-- NOT DONE
+SHOULD display all messages archived 
+SHOULD paginate 100 -->
 <div class="row">
   <aside>
       	<% if @messages.any? %>
-        <h3> Suggestions (<%= @messages.count %>) </h3>
+        <h1> Suggestions (<%= @messages.count %>) </h1>
         <ol>
         	<%= render @messages %>
         </ol>
@@ -16,6 +20,8 @@
   </aside>
 </div>
 
+<!-- NOT DONE
+SHOULD search inside messages -->
 <%= form_tag(messages_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
 <%= submit_tag "Search" %>

@@ -1,8 +1,10 @@
 <head>
+	<!-- Script for issuing title -->
     <title><%= fill_title(yield(:title)) %></title>
 
     <%= csrf_meta_tags %>
 
+    <!-- Inserts external sheets -->
     <%= stylesheet_link_tag    'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>

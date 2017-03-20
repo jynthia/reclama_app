@@ -1,3 +1,5 @@
+# Static Default Pages
+
 class FirstController < ApplicationController
   def home
   end

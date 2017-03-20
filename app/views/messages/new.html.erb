@@ -1,9 +1,13 @@
+<!-- Code for std title -->
 <% provide(:title, "New") %>
+<!-- User instruction -->
 <h1>Submit Suggestion here</h1>
 
 <div class="row">
+    <!-- Getting info from the user for adding new content -->
     <%= form_for (@message) do |f| %>
       
+      <!-- Error message for repeated numbers -->
       <% if @message.errors.any? %>
       	<%= "Number already exists" %>
     
@@ -15,6 +19,7 @@
       <%= f.label :number %>
       <%= f.number_field :number %>
 
+    <!-- Button -->  
 	  <%= f.submit "Send the message!" %>
     <% end %>
 </div>

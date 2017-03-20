@@ -1,5 +1,6 @@
 module ApplicationHelper
-	# adds title
+	
+  # adds title to the views
   def fill_title(page_title = '')
     base_title = "Reclama App"
     if page_title.empty?
