@@ -1,0 +1,14 @@
+<% provide(:title, "Box") %>
+
+<h1>Box</h1>
+	<p>This is the box page for the toy project Reclama App</p>
+	<h2><%= link_to "Upload your suggestion! <3", new_message_path %></h2>
+
+<div class="row">
+  <aside>
+      <h1>
+        <%= @message.content %>
+        <%= @message.number %>
+      </h1>
+  </aside>
+</div>

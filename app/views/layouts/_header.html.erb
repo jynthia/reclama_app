@@ -8,7 +8,9 @@
 
 					<li id="help"><%= link_to "Help", help_path %></li>
 
-					<li id="submit"><%= link_to "Submit Suggestion", new_path %></li>
+					<li id="submit"><%= link_to "Submit Suggestion", new_message_path %></li>
+
+					<li id="show"><%= link_to "Box", messages_path(@message, 1)%></li>
 				</ul>
 			</nav>
   </div>			

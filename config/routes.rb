@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'suggestions/new'
 
   root 'first#home'
 
@@ -7,5 +6,5 @@ Rails.application.routes.draw do
 
   get '/about', to: 'first#about'
 
-  get '/new', to: 'suggestions#new'
+  resources :messages
 end
