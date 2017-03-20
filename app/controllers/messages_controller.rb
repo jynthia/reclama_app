@@ -2,6 +2,12 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.find(params[:id])
+    @messages = Message.all
+    if params[:search]
+      @messages = Message.search(params[:search]).order("created_at DESC")
+    else
+      @messages = Message.all.order('created_at DESC')
+    end
   end
 
   def new
